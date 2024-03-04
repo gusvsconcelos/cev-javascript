@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador - Exercicio de JavaScript</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Contador</h1>
+    </header>
+
+    <section>
+      <div>
+        <!--Inicio, Fim e Passo do contador-->
+        <label>Início:</label><input type="number" name="inicio" id="inicio" />
+        <br />
+        <label>Fim:</label><input type="number" name="fim" id="fim" />
+        <br />
+        <label>Passo:</label><input type="number" name="passo" id="passo" />
+        <br />
+        <input type="button" value="contar" onclick="contar()"
+      </div>
+
+      <div id="res">
+        <!--Resultado-->
+        Preparando a contagem...
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Luiz Gustavo</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

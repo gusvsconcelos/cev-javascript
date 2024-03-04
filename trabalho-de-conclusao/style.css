@@ -1,0 +1,45 @@
+body {
+  background: rgb(130, 35, 35);
+  font-family: 'Montserrat';
+}
+
+header {
+  text-align: center;
+  color: aliceblue;
+  text-shadow: 4px 5px 1px #000;
+}
+
+section {
+  background: aliceblue;
+  font-family: 'Arial';
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 10px 10px 1px;
+}
+
+select {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+div#res {
+  font-size: 20px;
+}
+
+footer {
+  color: aliceblue;
+  text-align: center;
+  font-style: italic;
+  margin-top: 50px;
+}
+
+input[type='button'] {
+  background-color: white;
+  margin: 5px;
+  border-radius: 5px;
+  border-color: white;
+}

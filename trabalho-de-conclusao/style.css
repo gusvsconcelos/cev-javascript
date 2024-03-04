@@ -1,45 +1,39 @@
 body {
-  background: rgb(130, 35, 35);
-  font-family: 'Montserrat';
+  background-color: cadetblue;
 }
 
 header {
-  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 18px;
   color: aliceblue;
-  text-shadow: 4px 5px 1px #000;
+  text-shadow: 4px 4px #000;
+  text-align: center;
 }
 
 section {
-  background: aliceblue;
-  font-family: 'Arial';
+  background-color: aliceblue;
   border-radius: 10px;
-  text-align: center;
-  padding: 15px;
-  width: 500px;
+  width: 430px;
   margin: auto;
-  box-shadow: 10px 10px 1px;
+  padding: 12px;
+  box-shadow: 8px 8px #000;
+  text-align: center;
 }
 
 select {
-  width: 200px;
-  padding: 10px;
   margin: 10px;
+  width: 176px;
 }
 
 div#res {
-  font-size: 20px;
+  font-size: 22px;
+  margin-top: 10px;
 }
 
 footer {
-  color: aliceblue;
   text-align: center;
+  margin-top: 40px;
   font-style: italic;
-  margin-top: 50px;
-}
-
-input[type='button'] {
-  background-color: white;
-  margin: 5px;
-  border-radius: 5px;
-  border-color: white;
+  font-size: 20px;
+  color: white;
 }

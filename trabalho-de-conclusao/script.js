@@ -1,43 +1,66 @@
-const numArray = [];
-const num = document.getElementById('numtxt');
+let num = document.querySelector('input#numtxt');
+let lista = document.querySelector('select#nlist');
+let res = document.querySelector('div#res');
+let numArray = [];
 
-function adicionar() {
-  let lista = document.getElementById('nlista');
-
-  if (num.value < 1 || num.value > 100) {
-    window.alert('Por favor, forneça um número entre 1 e 100');
+function isNumber(n) {
+  if (Number(n) >= 1 && Number(n) <= 100) {
+    return true;
   } else {
-    numArray.push(num.value);
-    numArray.sort(function (a, b) {
-      return a - b;
-    }); // ASCENDING NUMBERS
-    let item = document.createElement('option');
-    item.text = `valor ${num.value} adicionado`;
-    lista.appendChild(item);
+    return false;
+  }
+}
+
+function inList(n, l) {
+  if (l.indexOf(Number(n)) != -1) {
+    return true;
+  } else {
+    return false;
   }
 }
 
 function analisar() {
-  if (num.value.length == 0) {
-    window.alert('Forneça um número antes de finalizar');
-  } else {
-    let arraySum = 0;
-    let arrayAvg = 0;
-
-    for (let i in numArray) {
-      arraySum += Number(numArray[i]);
-    }
-
-    arrayAvg += arraySum / numArray.length;
-
-    let res = document.getElementById('res');
+  if (isNumber(num.value) && !inList(num.value, numArray)) {
+    numArray.push(Number(num.value));
+    let item = document.createElement('option');
+    item.text = `O valor ${num.value} foi adicionado`;
+    lista.appendChild(item);
     res.innerHTML = '';
-    res.innerHTML += `<p>Ao todo, temos ${numArray.length} números cadastrados.</p>`;
-    res.innerHTML += `<p>O maior valor informado foi ${numArray.pop()}.</p>`;
-    res.innerHTML += `<p>O menor valor informado foi ${numArray.shift()}.</p>`;
-    res.innerHTML += `<p>A soma de todos os elementos é ${arraySum}.</p>`;
-    res.innerHTML += `<p>A média dos os elementos é ${arrayAvg.toFixed(
-      2
-    )}.</p>`;
+  } else {
+    window.alert('Número invalido ou já encontrado na lista');
+  }
+  num.value = '';
+  num.focus();
+}
+
+function finalizar() {
+  let total = 0;
+  let media = 0;
+  let maior = numArray[0];
+  let menor = numArray[0];
+
+  for (let i in numArray) {
+    if (numArray[i] > maior) {
+      maior = numArray[i];
+    } else if (numArray[i] < menor) {
+      menor = numArray[i];
+    }
+  }
+
+  for (let i in numArray) {
+    total += numArray[i];
+  }
+
+  media += total / numArray.length;
+
+  if (numArray.length == 0) {
+    window.alert('Adicione um número antes de finalizar');
+  } else {
+    res.innerHTML = '';
+    res.innerHTML += `<p>Ao todo temos ${numArray.length} números cadastrados.</p>`;
+    res.innerHTML += `<p>O maior número cadastrado foi ${maior}.</p>`;
+    res.innerHTML += `<p>O menor número cadastrado foi ${menor}.</p>`;
+    res.innerHTML += `<p>A soma de todos os valores é ${total}.</p>`;
+    res.innerHTML += `<p>A média dos valores é ${media}.</p>`;
   }
 }

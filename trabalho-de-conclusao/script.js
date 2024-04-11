@@ -1,6 +1,6 @@
-let num = document.querySelector('input#numtxt');
-let lista = document.querySelector('select#nlist');
-let res = document.querySelector('div#res');
+let num = document.querySelector("input#numtxt");
+let lista = document.querySelector("select#nlist");
+let res = document.querySelector("div#res");
 let numArray = [];
 
 function isNumber(n) {
@@ -22,14 +22,14 @@ function inList(n, l) {
 function analisar() {
   if (isNumber(num.value) && !inList(num.value, numArray)) {
     numArray.push(Number(num.value));
-    let item = document.createElement('option');
+    let item = document.createElement("option");
     item.text = `O valor ${num.value} foi adicionado`;
     lista.appendChild(item);
-    res.innerHTML = '';
+    res.innerHTML = "";
   } else {
-    window.alert('Número invalido ou já encontrado na lista');
+    window.alert("Número invalido ou já encontrado na lista");
   }
-  num.value = '';
+  num.value = "";
   num.focus();
 }
 
@@ -54,9 +54,9 @@ function finalizar() {
   media += total / numArray.length;
 
   if (numArray.length == 0) {
-    window.alert('Adicione um número antes de finalizar');
+    window.alert("Adicione um número antes de finalizar");
   } else {
-    res.innerHTML = '';
+    res.innerHTML = "";
     res.innerHTML += `<p>Ao todo temos ${numArray.length} números cadastrados.</p>`;
     res.innerHTML += `<p>O maior número cadastrado foi ${maior}.</p>`;
     res.innerHTML += `<p>O menor número cadastrado foi ${menor}.</p>`;

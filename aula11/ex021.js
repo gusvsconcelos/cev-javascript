@@ -8,7 +8,7 @@ console.log(`Nosso vetor tem ${num.length} elementos`);
 num.indexOf(5);
 var pos = num.indexOf(4);
 if (pos == -1) {
-  console.log('O valor não foi encontrada');
+  console.log("O valor não foi encontrada");
 } else {
   console.log(`o valor 9 esta na posição ${pos}`);
 }

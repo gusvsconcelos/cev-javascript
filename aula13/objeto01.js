@@ -1,10 +1,10 @@
 // Objetos
 let amigo = {
-  nome: 'Gustavo',
-  sexo: 'M',
+  nome: "Gustavo",
+  sexo: "M",
   peso: 70,
   engordar(p = 0) {
-    console.log('engordou');
+    console.log("engordou");
     this.peso += p;
   },
 };

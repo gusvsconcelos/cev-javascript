@@ -1,21 +1,21 @@
 function contar() {
-  let start = document.getElementById('inicio');
-  let end = document.getElementById('fim');
-  let step = document.getElementById('passo');
-  let res = document.getElementById('res');
+  let start = document.getElementById("inicio");
+  let end = document.getElementById("fim");
+  let step = document.getElementById("passo");
+  let res = document.getElementById("res");
 
   if (start.value.length == 0 || end.value.length == 0) {
-    window.alert('[ERRO] faltam dados');
+    window.alert("[ERRO] faltam dados");
   } else if (
     (start.value.length > 0 &&
       end.value.length > 0 &&
       step.value.length == 0) ||
     step.value == 0
   ) {
-    step.value += '1';
-    window.alert('O valor de [PASSO] não pode ser 0 ou vazio, considerando 1');
+    step.value += "1";
+    window.alert("O valor de [PASSO] não pode ser 0 ou vazio, considerando 1");
   } else {
-    res.innerHTML = 'Contando:';
+    res.innerHTML = "Contando:";
     let i = Number(start.value);
     let e = Number(end.value);
     let s = Number(step.value);

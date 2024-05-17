@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -20,20 +20,20 @@
     <div id="area">Interaja...</div>
 
     <script>
-      var a = window.document.getElementById('area');
-      a.addEventListener('click', clicar);
-      a.addEventListener('mouseenter', entrar);
-      a.addEventListener('mouseout', sair);
+      var a = window.document.getElementById("area");
+      a.addEventListener("click", clicar);
+      a.addEventListener("mouseenter", entrar);
+      a.addEventListener("mouseout", sair);
       function clicar() {
-        a.innerText = 'Clicou, safado!';
-        a.style.background = 'red';
+        a.innerText = "Clicou, safado!";
+        a.style.background = "red";
       }
       function entrar() {
-        a.innerText = 'Entrou :o';
+        a.innerText = "Entrou :o";
       }
       function sair() {
-        a.innerText = 'Saiu :(';
-        a.style.background = 'green';
+        a.innerText = "Saiu :(";
+        a.style.background = "green";
       }
     </script>
   </body>

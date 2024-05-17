@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -15,14 +15,14 @@
 
     <script>
       function nacionalidade() {
-        let pais = window.document.getElementById('pais');
-        let ver = window.document.querySelector('div#ver');
+        let pais = window.document.getElementById("pais");
+        let ver = window.document.querySelector("div#ver");
         let nac = pais.value;
         ver.innerHTML = `Você nasceu em ${nac}`;
-        if (nac == 'Brasil' || nac == 'brasil') {
-          ver.innerHTML += '<p>Brasileiro</p>';
+        if (nac == "Brasil" || nac == "brasil") {
+          ver.innerHTML += "<p>Brasileiro</p>";
         } else {
-          ver.innerHTML += '<p>Estrangeiro</P';
+          ver.innerHTML += "<p>Estrangeiro</P";
         }
       }
     </script>
